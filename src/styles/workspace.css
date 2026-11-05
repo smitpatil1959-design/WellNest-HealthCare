@@ -1,0 +1,103 @@
+/* A shared visual system for every authenticated portal and account screen. */
+#app-root, #auth-root {
+  --color-brand-50: #eef2e7;
+  --color-brand-100: #e1e9d5;
+  --color-brand-200: #c6d6b4;
+  --color-brand-300: #b2c89e;
+  --color-brand-400: #91ad7a;
+  --color-brand-500: #738e62;
+  --color-brand-600: #3f6749;
+  --color-brand-700: #244c3d;
+  --color-brand-800: #173f35;
+  --color-brand-900: #15392f;
+  --color-brand-950: #102d25;
+  --color-ink-950: #163b30;
+  --color-ink-900: #244536;
+  --color-ink-800: #385541;
+  --color-ink-700: #4c6351;
+  --color-ink-600: #5c6f5d;
+  --color-ink-500: #70806d;
+  --color-ink-400: #899582;
+  --color-slate-50: #f6f7f1;
+  --color-slate-100: #edf0e7;
+  --color-slate-200: #dce2d4;
+  --color-slate-300: #bdc9b5;
+  --color-line: #dfe4d7;
+  --color-surface-soft: #f6f7f1;
+  --color-surface-muted: #edf0e7;
+  --portal-accent: #dce7ca;
+  --portal-accent-ink: #48623e;
+  --portal-secondary: #eee8f1;
+  background: #f8f8f2;
+  color: #244536;
+}
+#app-root[data-portal='doctor'] { --portal-accent: #d6e9df; --portal-accent-ink: #3c6c57; }
+#app-root[data-portal='hospital'] { --portal-accent: #dce7eb; --portal-accent-ink: #466b77; }
+#app-root[data-portal='laboratory'] { --portal-accent: #e6dff0; --portal-accent-ink: #72628a; --portal-secondary: #e7eddb; }
+#app-root[data-portal='pharmacy'] { --portal-accent: #f0e0d0; --portal-accent-ink: #8e6c4c; --portal-secondary: #e5eadc; }
+#app-root[data-portal='insurance'] { --portal-accent: #ece6cd; --portal-accent-ink: #807543; }
+#app-root[data-portal='administrator'] { --portal-accent: #e3e1ed; --portal-accent-ink: #696282; --portal-secondary: #e7eadb; }
+#app-root .font-display, #auth-root .font-display { font-weight: 400; }
+#app-root #app-main { min-width: 0; }
+#app-root #app-main h1 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; letter-spacing: -.025em; }
+#app-root #app-main :is(.rounded-2xl.border, .rounded-xl.border) { border-color: #dfe5d7; background-image: none; box-shadow: 0 3px 14px -10px #173f3520; }
+#app-root #app-main :is(.rounded-2xl.border.bg-white, .rounded-xl.border.bg-white) { background: #fff; backdrop-filter: none; }
+#app-root #app-main :is(.rounded-2xl.border:hover, .rounded-xl.border:hover) { border-color: #c6d3bd; }
+#app-root #app-main :is(.text-brand-600, .text-brand-700, .text-brand-800, .text-brand-900) { color: #365b40; }
+#app-root #app-main :is(.bg-brand-50, .bg-teal-50, .bg-teal-50\/40, .bg-teal-50\/70) { background: #edf1e6; }
+#app-root #app-main :is(.bg-brand-600, .bg-brand-700) { background: #244c3d; }
+#app-root #app-main :is(.border-brand-100, .border-brand-200, .border-teal-100) { border-color: #dce5d0; }
+#app-root #app-main .portal-page-header { border-bottom: 1px solid #dfe4d6; padding-bottom: 24px; margin-bottom: 28px; }
+#app-root #app-main .portal-page-header h1 { font-size: clamp(32px, 3.4vw, 43px); }
+#app-root #app-main .portal-page-header > div > span:first-child { border: 0; background: var(--portal-accent); color: var(--portal-accent-ink); }
+#app-root #app-main input:not([type='checkbox']):not([type='radio']),
+#app-root #app-main select, #app-root #app-main textarea { border-color: #d8e0d0; box-shadow: none; }
+#app-root #app-main :is(input, select, textarea):focus { border-color: #738e62; --tw-ring-color: #738e6225; }
+#app-root :is(button, a)[class*='bg-brand-700'] { border-radius: 999px; }
+#app-root #app-main table { font-size: 12px; }
+#app-root #app-main table thead { background: #f0f3e9; }
+#app-root #app-main table th { padding-block: 14px; color: #66775d; font-size: 10px; letter-spacing: .08em; }
+#app-root #app-main table td { padding-block: 16px; }
+#app-root #app-main table tbody tr:hover { background-color: #f7f9f2; }
+#app-root #app-main .workspace-metric { position: relative; border-top: 3px solid var(--portal-accent); }
+#app-root #app-main .workspace-metric-icon { background: var(--portal-accent); color: var(--portal-accent-ink); border: 0; }
+#app-root #app-main .workspace-card { border-radius: 20px; }
+#app-root #app-main .portal-hero,
+#app-root[data-portal='doctor'] #app-main .doctor-hero {
+  background: #173f35;
+  background-image: none;
+  border: 0;
+  border-radius: 24px;
+  box-shadow: none;
+  color: #fff;
+}
+#app-root #app-main .portal-hero :is(h1, h2) { color: #fff; }
+#app-root #app-main .portal-hero h1 { font-size: clamp(32px, 3.7vw, 48px); }
+#app-root #app-main .portal-hero .hero-description { color: #cfdbc9; }
+#app-root #app-main .portal-hero .hero-eyebrow { color: #d8e9c3; border: 0; background: transparent; }
+#app-root #app-main .portal-hero .hero-actions :is(button,a) { border-radius: 999px; }
+#app-root #app-main .portal-hero .hero-actions .bg-brand-700 { background: #dce8c5; border-color: transparent; color: #244c3d; }
+#app-root #app-main .portal-hero .hero-actions .bg-white { background: transparent; color: #eef4e6; border-color: #9cb28f70; }
+#app-root #app-main .portal-hero .hero-actions .bg-white:hover { background: #ffffff10; }
+#app-root #app-main .portal-hero .hero-summary { background: #f5f5e9; color: #244c3d; }
+#app-root #app-main .portal-hero .hero-summary :is(h2,h3,p) { color: inherit; }
+.workspace-sidebar { scrollbar-width: thin; scrollbar-color: #65816e transparent; }
+.workspace-sidebar .workspace-link[aria-current='page'] { background: var(--portal-accent); color: #254735; }
+.workspace-sidebar .workspace-link[aria-current='page']::after { content: ''; height: 5px; width: 5px; border-radius: 50%; margin-left: auto; background: #365b40; }
+.workspace-sidebar .workspace-link:not([aria-current='page']):hover { background: #ffffff0c; color: #fff; }
+.workspace-sidebar nav { scrollbar-width: thin; scrollbar-color: #65816e transparent; }
+#auth-root :is(input:not([type='checkbox']),select) { height: 51px; border-radius: 12px; background-color: #fcfcf8; border-color: #d9e1cf; box-shadow: none; }
+#auth-root input[type='checkbox'] { accent-color: #244c3d; }
+#auth-root label > span:first-child { text-transform: none; letter-spacing: 0; font-size: 12px; }
+#auth-root :is(button[type='submit'],button[class*='border-line']) { min-height: 49px; border-radius: 999px; font-size: 12px; }
+#auth-root button[type='submit'] { background: #173f35; color: #fff; }
+#auth-root button[type='submit']:hover { background: #2e5945; }
+#auth-root .auth-form-links { font-size: 11px; }
+#auth-root .auth-form-links label { color: #6b7b64; }
+#app-root #app-main :is(input,select,textarea)[aria-invalid='true'], #auth-root :is(input,select,textarea)[aria-invalid='true'] { border-color: #df7881; --tw-ring-color: #df788125; }
+#app-root #app-main .workspace-metric:nth-child(3n+2) { border-top-color: #e6deec; }
+#app-root #app-main .workspace-metric:nth-child(3n+3) { border-top-color: #eddbc9; }
+#app-root #app-main .workspace-metric :is(.text-2xl,.text-3xl,.text-4xl) { font-size: 36px; font-weight: 400; }
+#app-root #app-main .workspace-metric { border-radius: 18px; }
+@media (max-width: 639px) { #auth-root input:not([type='checkbox']), #auth-root select { font-size: 16px; } }
+@media (prefers-reduced-motion: reduce) { #app-root *, #auth-root * { scroll-behavior: auto !important; } }

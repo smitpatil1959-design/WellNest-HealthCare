@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wellnest-healthcare.vercel.app/sitemap.txt

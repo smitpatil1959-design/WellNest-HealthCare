@@ -1,0 +1,20 @@
+services:
+  clamav:
+    image: clamav/clamav:stable
+    restart: unless-stopped
+    volumes:
+      - signatures:/var/lib/clamav
+  gateway:
+    build:
+      context: ../..
+      dockerfile: services/file-scanner/Dockerfile
+    restart: unless-stopped
+    environment:
+      SCAN_API_TOKEN: ${SCAN_API_TOKEN:?Set a private scanner token}
+      CLAMD_HOST: clamav
+    ports:
+      - "127.0.0.1:8082:8080"
+    depends_on:
+      - clamav
+volumes:
+  signatures:

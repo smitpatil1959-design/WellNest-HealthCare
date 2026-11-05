@@ -1,0 +1,14 @@
+https://wellnest-healthcare.vercel.app/
+https://wellnest-healthcare.vercel.app/about
+https://wellnest-healthcare.vercel.app/features
+https://wellnest-healthcare.vercel.app/pricing
+https://wellnest-healthcare.vercel.app/contact
+https://wellnest-healthcare.vercel.app/login
+https://wellnest-healthcare.vercel.app/get-started
+https://wellnest-healthcare.vercel.app/for/patients
+https://wellnest-healthcare.vercel.app/for/doctors
+https://wellnest-healthcare.vercel.app/for/hospitals
+https://wellnest-healthcare.vercel.app/for/laboratories
+https://wellnest-healthcare.vercel.app/for/pharmacies
+https://wellnest-healthcare.vercel.app/for/insurance
+https://wellnest-healthcare.vercel.app/for/administrators

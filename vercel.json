@@ -1,0 +1,42 @@
+{
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://wcoarnijdybkvltekiss.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_JwuDWLBxQaEiPtZWB13AZQ_Efvq0xVz",
+    "VITE_SUPABASE_URL": "https://wcoarnijdybkvltekiss.supabase.co",
+    "VITE_SUPABASE_ANON_KEY": "sb_publishable_JwuDWLBxQaEiPtZWB13AZQ_Efvq0xVz",
+    "VITE_GOOGLE_CLIENT_ID": "1065078894672-rmp5kp8vfjns5rn9kp5psfp16g691043.apps.googleusercontent.com",
+    "FULLSTACK_PROJECT_REF": "wcoarnijdybkvltekiss",
+    "FULLSTACK_RESTORE_API_URL": "https://designarena.ai/api/fullstack-restore"
+  },
+  "functions": { "api/router.js": { "maxDuration": 60 } },
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/router?path=:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
