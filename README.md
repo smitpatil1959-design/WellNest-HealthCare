@@ -1,8 +1,20 @@
+<a href="https://wellnest-healthcare.vercel.app/">
+<img src="./docs/readme-assets/hero.png" width="100%" alt="WellNest Healthcare - open the live website. Built by Smit Patil." />
+</a>
+
+<div align="center">
+
+**[OPEN LIVE WEBSITE](https://wellnest-healthcare.vercel.app/)** &nbsp; / &nbsp; **[EXPLORE THE PORTALS](#portals-and-workflows)** &nbsp; / &nbsp; **[MEET THE DEVELOPER](https://smit-patil-portfolio-eight.vercel.app/)**
+
+</div>
+
 # WellNest Healthcare
 
-A full-stack healthcare portfolio project connecting patients and care teams through seven dedicated portals.
+**One ecosystem. Connected care.**
 
-**[Explore WellNest](https://wellnest-healthcare.vercel.app/)**
+A full-stack healthcare portfolio project that connects patients and care teams through seven dedicated portals. It brings health records, appointments, prescriptions, and consent-based sharing into connected workflows.
+
+<img src="./docs/readme-assets/features.png" width="100%" alt="Project capabilities at a glance." />
 
 ## Portals and workflows
 
@@ -20,13 +32,21 @@ The application includes Google sign-in, authenticator-based two-factor authenti
 
 ## Stack
 
-React 19, TypeScript, Tailwind CSS 4, Vite, Supabase Auth/PostgreSQL/Storage, and Vercel serverless API handlers. Database workflow tests use isolated PostgreSQL through PGlite.
+| Layer | Technologies |
+| --- | --- |
+| Interface | React 19, TypeScript, Tailwind CSS 4, Framer Motion |
+| Frontend tooling | Vite 7, ESLint |
+| Data and identity | Supabase Auth, PostgreSQL, Supabase Storage |
+| API and deployment | Vercel serverless API handlers |
+| Workflow testing | Node.js test runner and isolated PostgreSQL through PGlite |
 
 ## Local development
 
 Use a supported Node.js version compatible with Vite 7 (Node 22.12 or later is a suitable baseline).
 
 ```sh
+git clone https://github.com/smitpatil1959-design/WellNest-HealthCare.git
+cd WellNest-HealthCare
 npm ci
 ```
 
@@ -64,3 +84,12 @@ Keep `.env.local`, `.env.services.local`, provider credentials, test-run manifes
 - Support requests do not automatically bypass MFA, delete accounts or determine retention decisions.
 
 This is a portfolio implementation. Its tests and interface do not establish independent regulatory certification or clinical readiness.
+
+---
+
+<p align="center">
+Built by <a href="https://github.com/smitpatil1959-design"><strong>Smit Patil</strong></a><br />
+Frontend Development Specialist &amp; AI / Software Developer<br /><br />
+<a href="https://smit-patil-portfolio-eight.vercel.app/">Portfolio</a> &nbsp; / &nbsp;
+<a href="https://www.linkedin.com/in/smitpatil2008/">LinkedIn</a>
+</p>
